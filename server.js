@@ -1,8 +1,20 @@
 const express = require('express');
+const connectDB = require('./config/db');
 
 const app = express();
 
+// Connecting to Database
+connectDB();
+
+// Init Middleware for Body parser
+app.use(express.json({ extended: false }));
+
 app.get('/', (req, res) => res.send('Api is Running'));
+
+// Defining Routes
+app.use('/api/users', require('./routes/api/users'));
+app.use('/api/auth', require('./routes/api/auth'));
+app.use('/api/empProfile', require('./routes/api/empProfile'));
 
 const PORT = process.env.PORT || 5000;
 

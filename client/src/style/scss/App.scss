@@ -1,0 +1,298 @@
+@import 'config';
+@import 'utilities';
+@import 'buttons';
+@import 'mobile';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font-stack;
+  font-size: 1rem;
+  line-height: 1.6;
+  background-color: $bodyBack-color;
+  color: #fff;
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+// Navbar
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 2rem;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  top: 0;
+  border-bottom: solid 1px #595e64;
+  opacity: 0.9;
+  background-color: rgba(121, 40, 40, 0.7);
+  text-transform: uppercase;
+  ul {
+    display: flex;
+    font-size: 1rem;
+  }
+  a {
+    color: #fff;
+    padding: 0.45rem;
+    margin: 0 0.25rem;
+  }
+  a:hover {
+    color: $danger-color;
+    font-weight: 600;
+  }
+  li:hover {
+    font-size: 1.1rem;
+    font-family: sans-serif;
+    cursor: pointer;
+  }
+}
+
+// Landing Page
+.landing {
+  position: relative;
+  background: url('./img/dumbells.jpg') no-repeat center center/cover;
+  background-attachment: fixed;
+  height: 100vh;
+  .landing-inner {
+    color: #fff;
+    height: 100%;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+//Overlay
+.dark-overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+// about
+.about {
+  background: url('./img/dumbells.jpg') no-repeat left center/cover;
+  background-size: 55%;
+  background-attachment: fixed;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 8vh;
+  width: 100%;
+  .inner-right {
+    width: 55%;
+    margin-left: auto;
+    background-color: $light-color;
+    color: $dark-color;
+    padding: 30px;
+    text-align: justify;
+    border-radius: 6px;
+    box-shadow: 0 0 6px 3px $light-color;
+    .services {
+      display: flex;
+      justify-content: space-between;
+      font-weight: bold;
+      border-radius: 6px;
+      border: 1px solid $dark-color;
+      box-shadow: 0 0 6px 3px $dark-color;
+    }
+    div {
+      background-color: $bodyBack-color;
+      height: 50px;
+      margin: -30px;
+      justify-content: center;
+      padding: 10px;
+    }
+  }
+
+  p {
+    line-height: 30px;
+    margin-bottom: 60px;
+  }
+  h1 {
+    margin-bottom: 30px;
+  }
+}
+
+// Pricing
+.pricing {
+  height: 100vh;
+  background-color: black;
+  padding: 3rem 6rem;
+  .inner-container {
+    display: flex;
+    justify-content: space-between;
+    span {
+      width: 23%;
+      height: 70vh;
+      background-color: white;
+      color: $dark-color;
+      text-align: center;
+      padding-top: 3rem;
+      LinkS {
+        position: absolute;
+        bottom: 0;
+      }
+    }
+  }
+}
+
+// register
+.register {
+  position: relative;
+  background: url('./img/dumbells.jpg') no-repeat center center/cover;
+  background-attachment: fixed;
+  height: 80vh;
+  margin: 0 6rem;
+}
+
+// login
+.login {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  background: $bodyBack-color;
+
+  h2 {
+    position: fixed;
+    padding: 0.7rem 2.7rem;
+    top: 0;
+    left: 0;
+  }
+  .container {
+    border: 3px solid $danger-color;
+    border-radius: 6px;
+    background: black;
+    box-shadow: 0 0 6px 2px $danger-color;
+  }
+}
+// Form style
+.form {
+  .form-group {
+    margin: 1.2rem 0;
+  }
+  .form-text {
+    display: block;
+    margin-top: 0.3rem;
+    color: #888;
+  }
+  input[type='text'],
+  input[type='email'],
+  input[type='password'],
+  input[type='date'],
+  select,
+  textarea {
+    display: block;
+    width: 100%;
+    padding: 0.4rem;
+    font-size: 1.2rem;
+    border-radius: 6px;
+    border: 1px solid rgb(58, 57, 57);
+  }
+  input[type='submit'],
+  button {
+    font: inherit;
+    box-shadow: 0px 0px 10px 2px grey;
+  }
+  .social-input {
+    display: flex;
+    i {
+      padding: 0.5rem;
+      width: 4rem;
+    }
+  }
+  .fa-facebook {
+    color: #3b5998;
+  }
+  .fa-instagram {
+    color: white;
+  }
+  .fa-twitter {
+    color: #38a1f3;
+  }
+}
+
+// Profiles Page
+.profiles {
+  display: grid;
+  grid-template-columns: auto auto;
+  .profile {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    align-items: center;
+    grid-gap: 2rem;
+    padding: 1rem;
+    line-height: 1.8;
+    margin: 1rem;
+    border: 1px solid $light-color;
+    border-radius: 6px;
+    box-shadow: 0 0 6px 3px $light-color;
+  }
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-areas:
+    'top top'
+    'about about';
+  grid-gap: 1rem;
+}
+
+.profile-top {
+  grid-area: top;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid $light-color;
+  border-radius: 6px;
+  box-shadow: 0 0 12px 0px $light-color;
+  img {
+    width: 250px;
+  }
+  .icons a {
+    color: #fff;
+    margin: 0 0.3rem;
+  }
+  .icons a:hover {
+    color: $dark-color;
+    font-size: 1.3rem;
+  }
+}
+
+.profile-about {
+  grid-area: about;
+  text-align: center;
+  border: 1px solid $light-color;
+  border-radius: 6px;
+  box-shadow: 0 0 12px 0px $light-color;
+}

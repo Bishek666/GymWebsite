@@ -1,0 +1,4 @@
+{
+    "mongoURI":"mongodb+srv://bishek:bishek@gym.u0r3l.mongodb.net/GymMembers?retryWrites=true&w=majority",
+    "jwtSecret": "scientistBaffeled"
+}

@@ -1,0 +1,222 @@
+// Utilities
+.container {
+  max-width: 1100px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 2rem;
+  margin-top: 6rem;
+  margin-bottom: 3rem;
+}
+
+// Round Image
+.round-img {
+  border-radius: 50%;
+}
+
+// Line
+.line {
+  height: 1px;
+  background: #ccc;
+  margin: 1.5rem 0;
+}
+
+// Margins and paddings
+$spaceAmount: (1, 2, 3, 4, 5);
+
+@each $space in $spaceAmount {
+  .m-#{$space} {
+    margin: #{$space}rem;
+  }
+  .my-#{$space} {
+    margin: #{$space}rem 0;
+  }
+  .p-#{$space} {
+    padding: #{$space}rem;
+  }
+  .py-#{$space} {
+    padding: #{$space}rem 0;
+  }
+}
+.m {
+  margin: 0.5rem;
+}
+.my {
+  margin: 0.5rem 0;
+}
+.p {
+  padding: 0.5rem;
+}
+.py {
+  padding: 0.5rem 0;
+}
+
+// alert
+.alert {
+  padding: 0.6rem;
+  margin: 1rem 0;
+  opacity: 0.9;
+  background: $light-color;
+  color: #333;
+}
+
+.alert-success {
+  @extend .alert;
+  background: $success-color;
+  color: #fff;
+}
+
+.alert-primary {
+  @extend .alert;
+  background: $primary-color;
+  color: #fff;
+}
+.alert-dark {
+  @extend .alert;
+  background: $dark-color;
+  color: #fff;
+}
+.alert-light {
+  @extend .alert;
+  background: $light-color;
+  color: #333;
+}
+
+.alert-danger {
+  @extend .alert;
+  background: $danger-color;
+  color: #fff;
+}
+
+// Text Size
+.x-large {
+  font-size: 3rem;
+}
+
+.large {
+  font-size: 2rem;
+}
+
+.medium {
+  font-size: 1.5rem;
+}
+
+.lead {
+  font-size: 1rem;
+}
+
+// Text Colors
+.text-center {
+  text-align: center;
+}
+
+.text-success {
+  color: $success-color;
+}
+.text-primary {
+  color: $primary-color;
+}
+.text-dark {
+  color: $dark-color;
+}
+.text-light {
+  color: $light-color;
+}
+
+.text-danger {
+  color: $danger-color;
+}
+
+// Text Uppercase
+.text-upper {
+  text-transform: uppercase;
+}
+
+// Background Colors
+.bg-success {
+  background: $success-color;
+}
+.bg-primary {
+  background: $primary-color;
+}
+.bg-dark {
+  background: $dark-color;
+}
+.bg-light {
+  background: $light-color;
+}
+
+.bg-danger {
+  background: $danger-color;
+}
+.bg-bodyBack {
+  background: $bodyBack-color;
+}
+
+// row
+.row {
+  display: flex;
+  flex-flow: row;
+}
+// column
+%column {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+}
+
+.col-4 {
+  @extend %column;
+  width: 25%;
+}
+.col-6 {
+  @extend %column;
+  width: 50%;
+}
+.col-12 {
+  @extend %column;
+  width: 100%;
+}
+
+// Spinner
+.lds-facebook {
+  display: block;
+  position: relative;
+  margin: auto;
+  width: 80px;
+  height: 80px;
+  div {
+    display: inline-block;
+    position: absolute;
+    left: 8px;
+    width: 16px;
+    background: #fff;
+    animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+  }
+  div:nth-child(1) {
+    left: 8px;
+    animation-delay: -0.24s;
+    background: $danger-color;
+  }
+  div:nth-child(2) {
+    left: 32px;
+    animation-delay: -0.12s;
+    background: $danger-color;
+  }
+  div:nth-child(3) {
+    left: 56px;
+    animation-delay: 0;
+    background: $danger-color;
+  }
+}
+
+@keyframes lds-facebook {
+  0% {
+    top: 8px;
+    height: 64px;
+  }
+  50%,
+  100% {
+    top: 24px;
+    height: 32px;
+  }
+}
